@@ -1,0 +1,54 @@
+.carousel_wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    .carousel_scroll_wrapper {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        overflow-y: hidden;
+        overflow-x: scroll;
+        &::-webkit-scrollbar {
+            display: none;
+        }
+        .carousel_scroll_inner {
+            @include flexCenter;
+            flex-wrap: nowrap;
+            justify-content: flex-start;
+            transition: transform 0.3s ease;
+        }
+    }
+
+    .carousel_controls {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        .control_btn {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background: transparent;
+            color: #000;
+            font-size: 24px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            outline: none;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            &:hover {
+                border: 1px solid #000;
+            }
+        }
+        .carousel_control_prev {
+            left: -50%;
+        }
+        .carousel_control_next {
+            right: -50%;
+        }
+    }
+}

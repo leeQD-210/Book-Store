@@ -1,0 +1,45 @@
+html,
+body,
+div,
+p {
+    box-sizing: border-box;
+}
+
+header {
+    font-size: 14px;
+    line-height: 38px;
+    padding: 18px 34px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+body {
+    margin: 0;
+    -ms-overflow-style: none;
+    -o-overflow: hidden;
+    scrollbar-width: none;
+}
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+    background-color: transparent;
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: #cfcfcf;
+}
+$theme-color: #7b5aff;
+$border-color: #d2d1d1;
+
+@keyframes typing {
+    from {
+        opacity: 0;
+        width: 0;
+    }
+    to {
+        opacity: 1;
+        width: 100%;
+    }
+}

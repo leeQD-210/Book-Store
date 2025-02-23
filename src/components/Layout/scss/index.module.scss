@@ -1,0 +1,47 @@
+.layout {
+    min-height: 100vh;
+    background: #f4f5f7;
+    .layout_header {
+        position: fixed;
+        top: 0;
+        width: 100vw;
+        height: 80px;
+        background-color: #000;
+        @include flexCenter;
+        justify-content: space-between;
+        padding: 0 60px;
+        box-sizing: border-box;
+        z-index: 999;
+        .left_wrap {
+            @include flexCenter;
+            .logo {
+                color: #fff;
+                cursor: pointer;
+            }
+        }
+        .right_wrap {
+            @include flexCenter;
+            height: 80px;
+            width: 100px;
+            .cart_icon {
+                position: relative;
+                i {
+                    color: #fff;
+                    font-size: 24px;
+                }
+                cursor: pointer;
+                .cart_count {
+                    position: absolute;
+                    right: -8px;
+                    top: -8px;
+                    background-color: red;
+                    border-radius: 50%;
+                    color: #fff;
+                    padding: 0 5px;
+                    font-size: 12px;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
