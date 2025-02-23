@@ -47,7 +47,7 @@ export const ShoppingCart = () => {
             )}
 
             <div className={styles['cart_list']}>
-                {shoppingCarts.map((cart, index) => {
+                {shoppingCarts.map((cart) => {
                     return (
                         <ShoppingCartItem
                             key={'shoppingCart' + cart.bookItem.id}

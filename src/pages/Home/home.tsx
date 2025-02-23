@@ -35,7 +35,7 @@ export const HomePage = () => {
                     ) : (
                         <Carousel autoPlay interval={5000} showControls showIndicators>
                             <>
-                                {carouselData.map((book, index) => {
+                                {carouselData.map((book) => {
                                     return (
                                         <CarouselItem key={book.id}>
                                             <div className={styles['book_wrap']}>
@@ -65,7 +65,7 @@ export const HomePage = () => {
                 <section>
                     <h2>Best Reviews</h2>
                     <div className={styles['reviewRate_book_list']}>
-                        {reviewsRateData.map((book, index) => {
+                        {reviewsRateData.map((book) => {
                             return <BookItem book={book} key={'review' + book.id}></BookItem>;
                         })}
                     </div>
@@ -73,7 +73,7 @@ export const HomePage = () => {
                 <section>
                     <h2>Recent Released</h2>
                     <div className={styles['newRelease_book_list']}>
-                        {newReleaseData.map((book, index) => {
+                        {newReleaseData.map((book) => {
                             return <BookItem book={book} key={'release' + book.id}></BookItem>;
                         })}
                     </div>
